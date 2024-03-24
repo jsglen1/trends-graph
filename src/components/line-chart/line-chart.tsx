@@ -14,7 +14,7 @@ export default function LineChart({ graphData }: Props) {
     let chartInstance: Chart<"line"> | null = null;
 
     if (chartRef.current && graphData != undefined && graphData != null) {
-      console.log(graphData);
+      // console.log(graphData);
 
       // Obtener los últimos 12 elementos de graphData
       const last12Data = graphData.slice(-12);
@@ -23,8 +23,8 @@ export default function LineChart({ graphData }: Props) {
       const labels = last12Data.map((data) => data.formattedTime);
       const values = last12Data.map((data) => data.value[0]);
 
-      console.log(labels);
-      console.log(values);
+      // console.log(labels);
+      // console.log(values);
 
       const ctx = chartRef.current.getContext("2d");
       if (ctx) {
