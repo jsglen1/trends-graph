@@ -64,7 +64,6 @@ export function CommandSearch() {
   };
 
   const handleInterestOverTime = async (title: string) => {
-    setSearchResults(null);
     try {
       // setLoading(true);
       const response = await axios.post<ApiTimelineDataResponse>(
@@ -76,6 +75,7 @@ export function CommandSearch() {
 
       //console.log(JSON.stringify(response.data.results.default.timelineData));
       setGraphData(response.data.results.default.timelineData);
+      setSearchResults(null);
       //setSearchResults(top.results);
       //setError("");
     } catch (error) {
