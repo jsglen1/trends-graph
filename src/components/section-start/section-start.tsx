@@ -6,11 +6,11 @@ import MobileSectionStart from "./mobile";
 export default function SectionStart() {
   return (
     <div>
-      <div className="hidden md:block">
+      <div className="hidden md:block py-20">
         <DesktopSectionStart />
       </div>
 
-      <div className="block md:hidden">
+      <div className="block md:hidden pt-10">
         <MobileSectionStart />
       </div>
     </div>
